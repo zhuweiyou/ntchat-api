@@ -23,7 +23,16 @@ docker run -d \
 
 使用 `Microsoft Remote Desktop` 远程连接 `ip:3389` 用户名和密码均为 `wineuser`
 
-打开桌面的`Home`文件夹, 找到 `ntchat@0.1.13/fastapi_example/main.py` 双击运行它
+打开桌面的`Home`文件夹, 找到 `ntchat@0.1.13/fastapi_example/main.py` <del>双击运行它</del>(如果不行,则右击打开方式选择Open With Python)
+
+```bash
+# 你也可以用终端运行, 但实测终端界面运行容易卡死, 建议上面的方式运行
+# 打开终端后:
+cd ntchat@0.1.13/fastapi_example
+wine python main.py
+```
+
+或者安装 pm2 之类的, 你喜欢的工具来运行
 
 ### 开发
 
