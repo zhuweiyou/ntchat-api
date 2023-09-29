@@ -1,5 +1,9 @@
 # ntchat-api
 
+Docker中运行的微信机器人API
+
+> 本项目主要是为了没有Windows Server服务器的用户使用ntchat搭建微信机器人, 仅支持 `linux/amd64`(不支持arm), 其它系统不保证能运行
+
 ## 文档
 
 ### 运行
@@ -17,19 +21,19 @@ docker run -d \
 
 ### 远程
 
-使用 Microsoft Remote Desktop 远程连接 `ip:3389`, 用户名和密码均为 `wineuser`
+使用 `Microsoft Remote Desktop` 远程连接 `ip:3389` 用户名和密码均为 `wineuser`
 
-打开文件夹找到 `ntchat@0.1.13/fastapi_example/main.py`, 双击运行它
+打开桌面的`Home`文件夹, 找到 `ntchat@0.1.13/fastapi_example/main.py` 双击运行它
 
 ### 开发
 
-本机浏览器打开 http://ip:8000/docs 查看 API 文档
+查看API文档 <http://ip:8000/docs>
 
-用你的程序或 Postman 请求:
+用你的程序或Postman请求:
 
-1. POST http://ip:8000/client/create 获得 guid 存下来, 后续所有请求都带上 guid (此时远程界面应该会自动启动 WeChat.exe)
+1. POST <http://ip:8000/client/create> 获得 `guid` 存下来, 后续所有请求都带上
 
-2. POST http://ip:8000/client/open
+2. POST <http://ip:8000/client/open> 此时远程界面应该会自动启动WeChat.exe(PC微信进程)
 
 ```json
 {
@@ -46,4 +50,8 @@ docker run -d \
   "callback_url": "你的程序接收消息回调的地址"
 }
 ```
+
+![远程桌面截图](https://github.com/zhuweiyou/ntchat-api/assets/8413791/9397f9a2-b871-4aa1-86f4-fb1acff4dfad)
+
+
 
