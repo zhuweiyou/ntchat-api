@@ -16,6 +16,7 @@ docker run -d \
   --env="RDP_SERVER=yes" \
   --publish="3389:3389/tcp" \
   --publish="8000:8000/tcp" \
+  --add-host=dldir1.qq.com:127.0.0.1
   zhuweiyou/ntchat-api:latest
 ```
 
